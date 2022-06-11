@@ -10,13 +10,13 @@ import Home from './container/Home'
 import NotFound from './container/NotFound';
 
 /* Components */
-import Menu from './components/Menu';
+import Wrapper from './components/Wrapper'
 
 const App = () => {
     return(
         <>
-            <BrowserRouter>
-            <Menu>
+        <BrowserRouter>
+            <Wrapper>
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/jugador" component={Jugador} />
@@ -24,7 +24,7 @@ const App = () => {
                     <Route exact path="/about" component={About} />
                     <Route component={NotFound}/>
                 </Switch>
-            </Menu>
+            </Wrapper>
         </BrowserRouter>
         </>
     )
