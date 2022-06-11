@@ -6,7 +6,7 @@ const Menu = () => {
     return (
       <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
         <div className="container">
-          <Navbar.Brand>Baufest Tennis</Navbar.Brand>
+          <Navbar.Brand>Tennis App</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
