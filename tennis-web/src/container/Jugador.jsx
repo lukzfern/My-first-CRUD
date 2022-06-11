@@ -26,7 +26,7 @@ const Jugador = () => {
 
     const [listaJugadores, setListaJugadores] = useState(listaTotalJugadores);
     const [showModal, setShowModal] = useState(false);
-    const [puntos, setPuntos] = useState(0);
+    const [puntos, setPuntos] = useState(null);
     const [nombre, setNombre] = useState('');
     const [validated, setValidated] = useState(false);
 
@@ -50,10 +50,10 @@ const Jugador = () => {
     }
 
     const handleSubmit = () => {
-        if (nombre!=='') {
+        if (nombre!=='' && puntos!==null) {
             agregarJugador();
             setValidated(true);
-            setPuntos(0);
+            setPuntos(null);
             setNombre('');
             handleClose()
         }
