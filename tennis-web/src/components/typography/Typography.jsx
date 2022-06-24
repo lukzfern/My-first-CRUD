@@ -1,15 +1,8 @@
-import React from 'react';
+import React from "react";
 import { Title } from './styles';
 
 const Typography = (props) => {
-    const { children } = props;
-    return (
-        <>
-        <Title>
-            {children}
-        </Title>
-        </>
-    )
+    return <Title id={props.id}>{props.children}</Title>;
 }
 
 export default Typography;

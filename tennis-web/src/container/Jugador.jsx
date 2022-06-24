@@ -26,7 +26,7 @@ const Jugador = () => {
 
     const [listaJugadores, setListaJugadores] = useState(listaTotalJugadores);
     const [showModal, setShowModal] = useState(false);
-    const [puntos, setPuntos] = useState(null);
+    const [puntos, setPuntos] = useState(0);
     const [nombre, setNombre] = useState('');
     const [validated, setValidated] = useState(false);
 
@@ -49,14 +49,12 @@ const Jugador = () => {
         setListaJugadores(nuevaListaJugadores);
     }
 
-    const handleSubmit = () => {
-        if (nombre!=='' && puntos!==null) {
+    const handleSubmit = (event, form) => {
+        event.preventDefault()
+        if (form.checkValidity())
             agregarJugador();
-            setValidated(true);
-            setPuntos(null);
-            setNombre('');
-            handleClose()
-        }
+        setValidated(true);
+        handleClose()
     }
 
     return(
@@ -70,7 +68,9 @@ const Jugador = () => {
                 showModal={showModal}
                 handleClose={handleClose}
                 validated={validated}
+                nombre={nombre}
                 setNombre={setNombre}
+                puntos={puntos}
                 setPuntos={setPuntos}
             />
             <Button onClick={abrirModal} variant="primary">Agregar</Button>{' '}

@@ -3,7 +3,7 @@ import { Button, Form, Row, Col } from "react-bootstrap";
 
 const FormJugador = (props) => {
 
-    const { handleSubmit, validated, setNombre, setPuntos } = props;
+    const { handleSubmit, validated, nombre, setNombre, puntos, setPuntos } = props;
 
     return (
     <Form noValidate validated={validated} onSubmit={handleSubmit}>
@@ -13,6 +13,7 @@ const FormJugador = (props) => {
           <Form.Label>Nombre</Form.Label>
           <Form.Control
             required
+            value={nombre}
             type="nombre"
             placeholder="Nombre del Jugador"
             onChange={(event) =>  {setNombre(event.target.value)}}
@@ -24,6 +25,7 @@ const FormJugador = (props) => {
           <Form.Label>Puntos</Form.Label>
           <Form.Control
             required
+            value={puntos}
             type="number"
             placeholder="Puntos"
             onChange={(event) => {setPuntos(event.target.value)}}

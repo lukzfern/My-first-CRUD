@@ -1,8 +1,8 @@
 html{
+    font-family: "Helvetica", Arial, sans-serif;
     background: lightgray;
 }
 
 h1.title-css{
-    font-family: "Helvetica", Arial, sans-serif;
     color: brown;
 }

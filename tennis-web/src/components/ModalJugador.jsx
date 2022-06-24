@@ -4,7 +4,7 @@ import FormJugador from "./FormJugador";
 
 const ModalJugador = (props) => {
 
-    const { handleSubmit, showModal, handleClose, validated, setNombre, setPuntos } = props;
+    const { handleSubmit, showModal, handleClose, validated, nombre, setNombre, puntos, setPuntos } = props;
 
 
     return (
@@ -16,7 +16,9 @@ const ModalJugador = (props) => {
             <FormJugador 
                 handleSubmit={handleSubmit}
                 validated={validated}
+                nombre={nombre}
                 setNombre={setNombre}
+                puntos={puntos}
                 setPuntos={setPuntos}
             />
         </Modal.Body>
